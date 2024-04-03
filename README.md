@@ -1,27 +1,58 @@
-# CrudUsuarios
+# Angular CRUD de Usuários com Firebase e Autenticação
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.2.
+Este é um projeto Angular que implementa um CRUD (Create, Read, Update, Delete) de usuários utilizando Firebase para autenticação e armazenamento de dados. O armazenamento temporário dos dados do usuário é realizado através do `sessionStorage`. Para estilização, foi utilizado Bootstrap 5 e Angular Material.
 
-## Development server
+## Pré-requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de começar, certifique-se de ter instalado o seguinte:
 
-## Code scaffolding
+- Node.js e npm (Node Package Manager): [Instalação do Node.js](https://nodejs.org/)
+- Angular CLI: Você pode instalar o Angular CLI globalmente usando o seguinte comando:
+  ```
+  npm install -g @angular/cli
+  ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação
 
-## Build
+1. Clone este repositório:
+   ```
+   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Navegue até o diretório do projeto:
+   ```
+   cd nome-do-repositorio
+   ```
 
-## Running unit tests
+3. Instale as dependências do projeto:
+   ```
+   npm install
+   ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Configuração do Firebase
 
-## Running end-to-end tests
+1. Acesse o [Console do Firebase](https://console.firebase.google.com/) e crie um novo projeto.
+2. No console do Firebase, adicione um aplicativo da web ao seu projeto.
+3. Copie as credenciais do SDK Firebase e substitua as configurações no arquivo `src/environments/environment.ts` com as suas próprias credenciais.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Executando o Servidor de Desenvolvimento
 
-## Further help
+Execute `ng serve` para iniciar o servidor de desenvolvimento. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você fizer alterações no código-fonte.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Funcionalidades
+
+- **Cadastro de Usuários:** Adicione novos usuários ao sistema.
+- **Listagem de Usuários:** Visualize todos os usuários cadastrados.
+- **Edição de Usuários:** Atualize as informações de um usuário existente.
+- **Exclusão de Usuários:** Remova usuários do sistema.
+
+## Tecnologias Utilizadas
+
+- Angular
+- Firebase (para autenticação e armazenamento de dados)
+- Bootstrap 5
+- Angular Material
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
