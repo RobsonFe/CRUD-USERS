@@ -45,18 +45,24 @@
 }
 
 
-.input-form{
+.input-form {
+  outline: none;
   padding: 8px 10px;
   width: 100%;
   border-radius: 4px;
-  border: 1px solid #00000000;
+  border: 2px solid #222;
   margin-bottom: 32px;
-  transition: 03s linear all;
-  box-shadow: inset 1px 1px 2px #babecc80 inset -1px -1px #d8d8d0;
-  & :focus{
-    border: 1px solid var(--primary-color);
+  transition: 0.3s linear all;
+  box-shadow: inset 1px 1px 2px #babecc80, inset -1px -1px 2px #bebebeb0;
+
+  &:focus{
+    border: 2px solid var(--primary-color);
   }
 }
+
+
+
+
 
 .footer{
 position: absolute;
