@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
   date = new Date().getFullYear();
+
+  userName: string;
+
+  constructor(private route: Router){
+
+  }
+
+  login(){
+    sessionStorage.setItem('user', this.userName);
+    console.log("Nome do usuario salvo: ", this.userName);
+    this.route.navigate(["home"]);
+  }
 }

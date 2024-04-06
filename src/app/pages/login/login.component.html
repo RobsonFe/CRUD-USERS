@@ -7,9 +7,9 @@
 
     <h2 class="subtitulo">Mais eficiente no controle de usuarios</h2>
 
-    <input class="input-form" type="text" placeholder="Digite o seu nome!" />
+    <input [(ngModel)]="userName" [ngModelOptions]="{standalone: true}" class="input-form" type="text" placeholder="Digite o seu nome!" />
 
-    <app-button textButton="Acessar" size="100"></app-button>
+    <app-button textButton="Acessar" size="100" (click)="login()"></app-button>
 
   </form>
 
