@@ -11,4 +11,5 @@ export class HomeComponent {
   ngOnInit(){
     this.userName = sessionStorage.getItem('user');
   }
+  
 }

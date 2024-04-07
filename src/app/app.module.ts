@@ -14,6 +14,10 @@ import { MenuComponent } from './components/menu/menu.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+//Firebase
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../environments/environment.development';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +33,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     FormsModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
     provideAnimationsAsync()

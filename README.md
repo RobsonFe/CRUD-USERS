@@ -35,9 +35,9 @@ Antes de começar, certifique-se de ter instalado o seguinte:
 2. No console do Firebase, adicione um aplicativo da web ao seu projeto.
 3. Copie as credenciais do SDK Firebase e substitua as configurações no arquivo `src/environments/environment.ts` com as suas próprias credenciais.
 
-## Executando o Servidor de Desenvolvimento
+## Confira o Projeto 
 
-Execute `ng serve` para iniciar o servidor de desenvolvimento. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você fizer alterações no código-fonte.
+ Acesse o projeto [Clicando aqui](https://crudusers1.netlify.app/)
 
 ## Funcionalidades
 
