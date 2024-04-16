@@ -13,6 +13,8 @@ import { MenuComponent } from './components/menu/menu.component';
 //Angular Material
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 //Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -34,6 +36,8 @@ import { CrudComponent } from './pages/crud/crud.component';
     BrowserAnimationsModule,
     FormsModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatProgressSpinnerModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
