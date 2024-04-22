@@ -6,6 +6,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalViewUserComponent } from './modal-view-user/modal-view-user.component';
+import { ModalFormUserComponent } from './modal-form-user/modal-form-user.component';
 
 @Component({
   selector: 'app-crud',
@@ -74,5 +75,12 @@ export class CrudComponent {
       height: '330px',
       data: user
     })
+  }
+
+  openModalAddUser(){
+    this.dialog.open(ModalFormUserComponent, {
+      width: '700px',
+      height: '400px'
+    }).afterClosed().subscribe(()=> this.getListUsers());
   }
 }
