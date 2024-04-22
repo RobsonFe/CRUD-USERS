@@ -15,6 +15,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'
+import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 //Firebase
 import { AngularFireModule } from '@angular/fire/compat';
@@ -39,6 +42,11 @@ import { CrudComponent } from './pages/crud/crud.component';
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatPaginator,
+    MatPaginatorModule,
+    MatSort,
+    MatSortModule,
+    MatTableModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
