@@ -1,9 +1,11 @@
+import { User } from './../../interfaces/user';
 import { MatTableDataSource } from '@angular/material/table';
 import { UsersService } from './../../services/users.service';
 import { Component, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
-import { User } from '../../interfaces/user';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalViewUserComponent } from './modal-view-user/modal-view-user.component';
 
 @Component({
   selector: 'app-crud',
@@ -13,14 +15,18 @@ import { User } from '../../interfaces/user';
 export class CrudComponent {
 
   displayedColumns: string[] = ['firebaseid', 'name', 'email', 'role', 'benefits', 'action'];
-  // dataSource: MatTableDataSource<UsersService>;
   dataSource: any ;
   listusers: User[] = [];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private usersService:UsersService){
+  constructor(
+
+    private usersService:UsersService,
+    public dialog: MatDialog
+
+  ){
     this.dataSource = new MatTableDataSource<any>(this.listusers);
   }
 
@@ -57,5 +63,16 @@ export class CrudComponent {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+
+  //Logica do Modal
+
+  openModalViewUser(user: User){
+    this.dialog.open(ModalViewUserComponent, {
+      width: '700px',
+      height: '330px',
+      data: user
+    })
   }
 }

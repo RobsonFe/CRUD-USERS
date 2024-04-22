@@ -18,11 +18,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator'
 import { MatSort, MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from '@angular/material/dialog'
 
 //Firebase
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment.development';
 import { CrudComponent } from './pages/crud/crud.component';
+import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { CrudComponent } from './pages/crud/crud.component';
     LoginComponent,
     HomeComponent,
     MenuComponent,
-    CrudComponent
+    CrudComponent,
+    ModalViewUserComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { CrudComponent } from './pages/crud/crud.component';
     MatSort,
     MatSortModule,
     MatTableModule,
+    MatDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
