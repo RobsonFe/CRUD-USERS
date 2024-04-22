@@ -25,6 +25,8 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment.development';
 import { CrudComponent } from './pages/crud/crud.component';
 import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
+import { ModalFormUserComponent } from './pages/crud/modal-form-user/modal-form-user.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-
     HomeComponent,
     MenuComponent,
     CrudComponent,
-    ModalViewUserComponent
+    ModalViewUserComponent,
+    ModalFormUserComponent
   ],
   imports: [
     BrowserModule,
